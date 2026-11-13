@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<rect width="64" height="64" rx="17" fill="#203b2c"/>
+<!-- curved olive branch / Z gesture -->
+<path d="M14 15 C28 8 43 11 49 20 C54 29 42 37 31 43 C23 47 18 51 16 56"
+      fill="none" stroke="#d4b879" stroke-width="3.4" stroke-linecap="round"/>
+<!-- leaves -->
+<path d="M23 14 C17 5 7 7 8 16 C14 21 20 19 23 14Z" fill="#9eae7b"/>
+<path d="M42 17 C45 7 56 7 57 16 C53 23 46 23 42 17Z" fill="#b5c394"/>
+<!-- olives -->
+<ellipse cx="25" cy="29" rx="6.4" ry="9" transform="rotate(-32 25 29)" fill="#c5a35f"/>
+<ellipse cx="38" cy="31" rx="6.4" ry="9" transform="rotate(29 38 31)" fill="#8d9d67"/>
+<path d="M27 24 C31 20 35 20 39 24" fill="none" stroke="#e7d3a1" stroke-width="1.5" stroke-linecap="round"/>
+<!-- small oil glint -->
+<path d="M47 43 C51 48 49 53 45 54 C41 53 40 48 47 43Z" fill="#d9bd7c"/>
+</svg>
