@@ -235,3 +235,52 @@ h1,h2,h3{line-height:1.35;letter-spacing:0}
 .order-fallback{display:none;text-align:center;margin-top:12px;color:#1f5f3a;text-decoration:underline}
 .order-footer{text-align:center;padding:20px;color:#687264;font-size:12px}
 @media(max-width:600px){.order-card{padding:18px}.order-card h1{font-size:23px}.order-wrap{margin-top:8px}.order-form{gap:12px}}
+
+
+/* ZAYTOON order page refinement */
+.order-page{background:#f4f0e6;color:#26352a;min-height:100vh}
+.order-header{position:relative;top:auto;padding-inline:clamp(20px,7.5%,100px);height:76px}
+.order-header .order-back{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:1px solid #d8d1c1;border-radius:8px;font-size:13px;color:#203b2c;transition:.2s}
+.order-header .order-back:hover{background:#eee8da}
+.order-wrap{width:min(900px,calc(100% - 36px));margin:42px auto 54px}
+.order-card{background:#fbfaf6;border:1px solid #e4ddce;border-radius:18px;padding:clamp(22px,4vw,42px);box-shadow:0 18px 55px rgba(32,59,44,.08)}
+.order-heading{text-align:center;margin-bottom:26px}
+.order-eyebrow{font:700 10px "DM Sans",sans-serif;letter-spacing:2px;color:#a58a53;margin:0 0 8px}
+.order-card h1{font-size:clamp(25px,3vw,36px);line-height:1.35;color:#203b2c;margin:0 0 8px}
+.order-heading>p:last-child{font-size:13px;color:#74796d;margin:0}
+.order-summary{display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px 18px;background:#f0ece1;border:1px solid #e5dece;border-radius:13px;padding:18px 20px;margin-bottom:26px}
+.order-summary h2{grid-column:1/-1;font-size:16px;margin:0 0 3px}
+.order-product{font-size:14px}
+.qty-row{grid-column:2;grid-row:2;display:flex;align-items:center;gap:12px}
+.qty-row>span{font-size:13px;color:#6d7568}
+.qty-row button{width:36px;height:36px;border:1px solid #c9d3c6;border-radius:8px;background:#fbfaf6;color:#203b2c;font-size:20px;cursor:pointer}
+.qty-row output{min-width:18px;text-align:center;font-weight:700}
+.order-price{grid-column:1/-1;border-top:1px solid #ded7c8;padding-top:9px;margin-top:4px;font-size:12px;color:#687264}
+.order-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 20px}
+.order-form .field{min-width:0;display:flex;flex-direction:column;gap:6px}
+.order-form .field:nth-of-type(5),.order-form .field:nth-of-type(7){grid-column:1/-1}
+.order-form .field label{font-size:13px;font-weight:700;color:#344437}
+.order-form .field label span{color:#a45b43}
+.order-form .field input,.order-form .field select,.order-form .field textarea{width:100%;min-height:48px;border:1px solid #d8d3c7;border-radius:9px;background:#fffefa;color:#26352a;padding:10px 13px;font:15px "Cairo",sans-serif;transition:border-color .2s,box-shadow .2s}
+.order-form .field textarea{min-height:90px;resize:vertical}
+.order-form .field input::placeholder{color:#a1a294;font-size:13px}
+.order-form .field input:focus,.order-form .field select:focus,.order-form .field textarea:focus{outline:0;border-color:#5b805e;box-shadow:0 0 0 3px rgba(47,125,79,.12)}
+.order-form .field [aria-invalid="true"]{border-color:#b42318}
+.field-error{color:#b42318;font-size:12px}
+.order-submit{grid-column:1/-1;min-height:54px;border:0;border-radius:10px;background:#203b2c;color:#fff;font:700 15px "Cairo",sans-serif;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:background .2s,transform .2s}
+.order-submit:hover{background:#31563d;transform:translateY(-1px)}
+.order-submit svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.order-note{grid-column:1/-1;text-align:center;line-height:1.9;margin:0;color:#74796d;font-size:12px}
+.order-fallback{grid-column:1/-1;color:#31563d;text-align:center}
+.order-footer{background:#192f22;color:#d9dfd4;padding:23px;font-size:11px}
+@media(max-width:650px){
+ .order-header{height:68px;padding-inline:5%;}.order-header .logo{font-size:19px}
+ .order-wrap{width:calc(100% - 24px);margin:20px auto 32px}
+ .order-card{padding:20px 15px;border-radius:14px}
+ .order-form{grid-template-columns:1fr;gap:13px}
+ .order-form .field:nth-of-type(5),.order-form .field:nth-of-type(7){grid-column:auto}
+ .order-summary{padding:14px;grid-template-columns:1fr;gap:8px}
+ .qty-row{grid-column:1;grid-row:auto;justify-content:flex-start}
+ .order-price{grid-column:1}
+ .order-heading>p:last-child{font-size:12px}
+}
