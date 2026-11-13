@@ -130,3 +130,60 @@ body.dark-mode .soon-grid article { background: #30372b; }
 body.dark-mode .uses-grid div,
 body.dark-mode .detail, body.dark-mode .price { border-color: #414638; }
 body.dark-mode .header nav { background: #1d241d; }
+
+
+/* ZAYTOON editorial refinements */
+:root{
+  --space-1:8px; --space-2:16px; --space-3:24px; --space-4:48px; --space-5:80px;
+  --brand-green:#203b2c; --brand-cream:#f4efe4; --brand-gold:#a58a53;
+  --image-fallback:#e9e4d3;
+}
+body{background:var(--brand-cream);line-height:1.8}
+.hero,.product-image,.hero-visual,.story-photo,.inspiration-grid figure{background:var(--image-fallback)}
+.hero-visual img,.product-image img,.inspiration-grid img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+.hero-visual,.product-image,.story-photo,.inspiration-grid figure{border-radius:16px;overflow:hidden}
+.product{border-radius:16px;overflow:hidden;box-shadow:0 14px 40px rgba(32,59,44,.09);padding:0}
+.product-copy{padding:40px}
+.product-copy h3{font-size:clamp(24px,3vw,32px);line-height:1.35;margin:0 0 12px}
+.product-pill{display:inline-flex;align-items:center;min-height:28px;padding:2px 12px;border-radius:999px;background:#e8e0cd;color:#45533b;font-size:12px;margin-bottom:16px}
+.price{border-top:1px solid #e2d9c8;margin-top:18px;padding-top:18px}
+.price strong{font-size:17px}
+.product-copy .wide{width:100%;min-height:48px;border-radius:8px}
+.hint{font-size:12px;line-height:1.8}
+.topline span{display:inline-flex;width:14px;height:14px}
+.topline svg{width:100%;height:100%;fill:none;stroke:#c8ae75;stroke-width:1.5;stroke-linecap:round}
+.utility-btn{width:44px;height:44px;display:grid;place-items:center}
+.utility-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.header-tools{display:flex;align-items:center;gap:8px}
+.story-emblem{display:grid;place-items:center;background:#e9e4d3}
+.story-emblem svg{width:180px;height:180px}
+.story-emblem span{position:absolute;bottom:18px;inset-inline-start:18px;background:#203b2c;color:white;padding:8px 13px;font:9px "Cairo";letter-spacing:1px}
+.inspiration-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:32px}
+.inspiration-grid figure{margin:0;position:relative;aspect-ratio:3/2}
+.inspiration-grid img{display:block}
+.inspiration-grid figcaption{position:absolute;inset-inline-start:12px;bottom:12px;background:rgba(32,59,44,.9);color:#fff;border-radius:6px;padding:6px 12px;font-size:13px}
+.order-steps{display:flex;align-items:center;justify-content:center;gap:24px;background:#eee8da;padding-block:40px}
+.order-steps div{display:flex;align-items:center;gap:10px;font-size:15px}
+.order-steps div span{color:#a58a53;font-weight:800}
+.order-steps>i{width:24px;height:24px;color:#a58a53}
+.order-steps svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.whatsapp-float{inset-inline-start:20px;inset-inline-end:auto;bottom:calc(16px + env(safe-area-inset-bottom));width:56px;height:56px;border-radius:50%;background:#25D366}
+.whatsapp-float svg{width:28px;height:28px}
+html[dir="rtl"] .ltr-isolate, bdi[dir="ltr"]{direction:ltr;unicode-bidi:isolate}
+body,button,a{font-family:"Cairo",sans-serif}
+h1,h2,h3{line-height:1.35;letter-spacing:0}
+@media(max-width:800px){
+ .product-copy{padding:28px 7%}
+ .inspiration-grid{gap:10px}
+ .order-steps{gap:12px;padding-block:28px}
+ .order-steps div{font-size:13px}
+}
+@media(max-width:480px){
+ .inspiration-grid{grid-template-columns:1fr;gap:12px}
+ .inspiration-grid figure{aspect-ratio:16/9}
+ .order-steps{align-items:flex-start;flex-direction:column;gap:10px;padding:30px 7%}
+ .order-steps>i{transform:rotate(90deg);margin-inline-start:8px}
+ .product-copy h3{font-size:25px}
+ .product-pill{margin-bottom:12px}
+ .whatsapp-float{inset-inline-start:16px;inset-inline-end:auto;bottom:calc(16px + env(safe-area-inset-bottom))}
+}

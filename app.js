@@ -1,5 +1,5 @@
 // ZAYTOON: bilingual interface + persistent appearance preference.
-const STORE = { price: 250, whatsapp: "201114386413" };
+const STORE = { whatsapp: "201114386413" };
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 $("#year").textContent = new Date().getFullYear();
@@ -27,12 +27,11 @@ const translations = {
     ".manifesto > p:last-child": "We bring you olive oil from Sinai: a simple, clear choice for your table every day.",
     ".product-section .section-head .eyebrow": "Our selection",
     ".product-section .section-head h2": 'One product,<br><em>a story worth sharing.</em>',
-    ".product-copy h3": 'Olive Oil<br><em>1 Liter</em>',
+    ".product-copy h3": "ZAYTOON Olive Oil",
+    ".product-pill": "1 Liter",
     ".product-copy > p:not(.eyebrow)": "Olive oil from Sinai, suitable for food use and adding a special touch to your dishes.",
-    ".detail:nth-of-type(1) span": "Size",
-    ".detail:nth-of-type(1) b": "1 Liter",
-    ".detail:nth-of-type(2) span": "Origin",
-    ".detail:nth-of-type(2) b": "Sinai – Egypt",
+    ".detail span": "Origin",
+    ".detail b": "Sinai – Egypt",
     ".price span": "Price",
     ".product-copy .wide": 'Order via WhatsApp <span>↗</span>',
     ".hint": "We’ll confirm the price and order details with you directly.",
@@ -89,7 +88,8 @@ const translations = {
     ".manifesto > p:last-child": "بنقدملك زيت زيتون من سيناء، علشان يكون اختيار بسيط وواضح على مائدتك كل يوم.",
     ".product-section .section-head .eyebrow": "اختيارنا ليك",
     ".product-section .section-head h2": 'منتج واحد،<br><em>وحكاية تستاهل.</em>',
-    ".product-copy h3": 'زيت زيتون<br><em>1 لتر</em>',
+    ".product-copy h3": "زيت زيتون ZAYTOON",
+    ".product-pill": "1 لتر",
     ".product-copy > p:not(.eyebrow)": "زيت زيتون من سيناء، مناسب للاستخدام الغذائي وإضافة لمسة مميزة لأطباقك.",
     ".detail:nth-of-type(1) span": "الحجم",
     ".detail:nth-of-type(1) b": "1 لتر",
@@ -140,7 +140,7 @@ function setLanguage(lang) {
     if (el) el.innerHTML = value;
   });
   $("#year").textContent = new Date().getFullYear();
-  $("#price").textContent = lang === "ar" ? `${STORE.price} جنيه` : `EGP ${STORE.price}`;
+  $("#price").textContent = lang === "ar" ? "يُحدد قريباً" : "To be confirmed";
   $(".language-toggle").textContent = lang === "ar" ? "EN" : "ع";
   $(".language-toggle").title = lang === "ar" ? "Switch to English" : "التبديل إلى العربية";
   $(".hamb").setAttribute("aria-label", lang === "ar" ? "فتح القائمة" : "Open menu");
@@ -159,11 +159,15 @@ function setLanguage(lang) {
 const savedLanguage = localStorage.getItem("zaytoon-language") || "ar";
 const savedTheme = localStorage.getItem("zaytoon-theme") || "light";
 if (savedTheme === "dark") document.body.classList.add("dark-mode");
-$(".theme-toggle").textContent = savedTheme === "dark" ? "☀" : "☾";
+$(".theme-toggle").innerHTML = savedTheme === "dark"
+  ? '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>'
+  : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A8 8 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></svg>';
 $(".theme-toggle").addEventListener("click", () => {
   const dark = document.body.classList.toggle("dark-mode");
   localStorage.setItem("zaytoon-theme", dark ? "dark" : "light");
-  $(".theme-toggle").textContent = dark ? "☀" : "☾";
+  $(".theme-toggle").innerHTML = dark
+    ? '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>'
+    : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A8 8 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></svg>';
   setLanguage(document.documentElement.lang || "ar");
 });
 $(".language-toggle").addEventListener("click", () => setLanguage(document.documentElement.lang === "ar" ? "en" : "ar"));
