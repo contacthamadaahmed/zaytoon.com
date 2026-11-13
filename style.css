@@ -187,3 +187,51 @@ h1,h2,h3{line-height:1.35;letter-spacing:0}
  .product-pill{margin-bottom:12px}
  .whatsapp-float{inset-inline-start:16px;inset-inline-end:auto;bottom:calc(16px + env(safe-area-inset-bottom))}
 }
+
+/* Interactive green icon system */
+.feature-icon,.green-icon{width:56px;height:56px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#e8f3ec;color:#2f7d4f;transition:transform 200ms ease,background-color 200ms ease,box-shadow 200ms ease}
+.feature-icon{margin:17px 0}
+.feature-icon svg,.green-icon svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.green-icon{flex:0 0 56px}
+.order-steps .green-icon{margin-inline:6px}
+.contact-symbol{margin-bottom:12px}
+.inspiration-grid figcaption{display:flex;align-items:center;gap:8px}
+.inspiration-grid figcaption .green-icon{width:36px;height:36px;flex-basis:36px}
+.inspiration-grid figcaption .green-icon svg{width:19px;height:19px}
+@media(hover:hover) and (pointer:fine){
+ .feature-grid article:hover .feature-icon,.green-icon:hover,.green-icon:focus-visible{transform:translateY(-3px)}
+ .feature-grid article:hover .feature-icon,.green-icon:hover{background:#d5ebdd;box-shadow:0 6px 14px rgba(31,95,58,.13);color:#1f5f3a}
+}
+.feature-grid article:active .feature-icon,.green-icon:active{transform:scale(.97)}
+.green-icon:focus-visible,.feature-icon:focus-visible{outline:2px solid #2f7d4f;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.feature-icon,.green-icon{transition:none}.feature-grid article:hover .feature-icon,.green-icon:hover,.green-icon:focus-visible,.feature-grid article:active .feature-icon,.green-icon:active{transform:none}}
+/* Order page */
+.order-page{min-height:100vh;background:#f4efe4}
+.order-top{max-width:560px;margin:0 auto;padding:18px 18px 0}
+.order-back{display:inline-flex;align-items:center;min-height:44px;color:#203b2c;font-weight:700;font-size:14px}
+.order-wrap{width:min(560px,calc(100% - 32px));margin:8px auto 56px}
+.order-card{background:#f8f4eb;border:1px solid #e2d9c8;border-radius:16px;padding:24px;box-shadow:0 14px 40px rgba(32,59,44,.09)}
+.order-card h1{font-size:26px;color:#203b2c;margin:0 0 18px}
+.order-summary{background:#eee8da;border-radius:12px;padding:16px;margin-bottom:22px}
+.order-summary h2{font-size:17px;margin:0 0 12px;color:#203b2c}
+.order-product{font-weight:700;font-size:15px}
+.order-price{font-size:13px;color:#465448;margin-top:8px}
+.qty-row{display:flex;align-items:center;gap:12px;margin-top:14px}
+.qty-row button{width:44px;height:44px;border:1px solid #c9d3c6;border-radius:9px;background:#fff;color:#203b2c;font-size:22px}
+.qty-row output{min-width:24px;text-align:center;font-weight:800}
+.order-form{display:grid;gap:14px}
+.field{display:grid;gap:5px}
+.field label{font-size:14px;font-weight:700;color:#26352a}
+.field input,.field select,.field textarea{width:100%;min-height:48px;padding:11px 12px;border:1px solid #c9c6b9;border-radius:9px;background:#fffdf8;color:#26352a;font:16px "Cairo",sans-serif;line-height:1.6}
+.field textarea{min-height:92px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #2f7d4f;outline-offset:1px}
+.field [aria-invalid="true"]{border:2px solid #b42318}
+.field-error{min-height:0;color:#b42318;font-size:12px}
+.field-error:empty{display:none}
+.field-hint,.order-note{font-size:12px;color:#566254}
+.order-submit{width:100%;min-height:52px;border:0;border-radius:9px;background:#25D366;color:#123c24;font:700 16px "Cairo",sans-serif;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer}
+.order-submit svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.order-note{text-align:center;line-height:1.9;margin:8px 0 0}
+.order-fallback{display:none;text-align:center;margin-top:12px;color:#1f5f3a;text-decoration:underline}
+.order-footer{text-align:center;padding:20px;color:#687264;font-size:12px}
+@media(max-width:600px){.order-card{padding:18px}.order-card h1{font-size:23px}.order-wrap{margin-top:8px}.order-form{gap:12px}}
