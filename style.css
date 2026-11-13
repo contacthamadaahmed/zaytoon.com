@@ -24,3 +24,109 @@ a,button{ -webkit-tap-highlight-color:transparent }
 }
 
 .leaf svg,.round-seal b svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.round-seal b{display:grid;place-items:center}
+
+
+/* Language and appearance controls */
+.header-tools{display:flex;align-items:center;gap:8px;margin-inline-start:auto;margin-inline-end:16px}
+.utility-btn{min-width:42px;height:42px;padding:0 10px;border:1px solid #d9d5c9;border-radius:3px;background:transparent;color:#203b2c;font:700 12px "DM Sans",sans-serif;cursor:pointer}
+.utility-btn:hover{background:#eeece2}
+.header-tools .theme-toggle{font-size:19px}
+@media(max-width:800px){.header-tools{margin-inline-start:auto;margin-inline-end:8px;gap:5px}.utility-btn{min-width:40px;height:40px}.nav-cta{margin-inline-start:0;margin-inline-end:8px;padding:9px 11px}}
+@media(max-width:480px){.header{padding:0 4%}.logo{gap:5px}.logo svg{width:28px}.logo small{font-size:8px}.utility-btn{min-width:36px;height:38px;padding:0 7px}.header-tools{margin-inline-end:5px}.nav-cta{font-size:9px;padding:8px 9px}}
+/* Dark mode: calm, low-glare olive palette */
+body.dark-mode{background:#151b17;color:#e7e8df}
+body.dark-mode .topline{background:#101612;color:#d9ddcf}
+body.dark-mode .header{background:rgba(23,31,25,.97);border-color:#303a31}
+body.dark-mode .logo,body.dark-mode .hamb{color:#e4e8dc}
+body.dark-mode .logo small,body.dark-mode .footer-logo small{color:#aab3a4}
+body.dark-mode .header nav{color:#d0d6ca}
+body.dark-mode .header nav a:hover{color:#d2bd8a}
+body.dark-mode .utility-btn{color:#e7e8df;border-color:#536052}
+body.dark-mode .utility-btn:hover{background:#29362c}
+body.dark-mode .nav-cta,body.dark-mode .primary{background:#a9b88a;color:#172119}
+body.dark-mode .hero,body.dark-mode .coming{background:#202a22}
+body.dark-mode .hero h1,body.dark-mode .manifesto h2,body.dark-mode .section-head h2,body.dark-mode .coming h2,body.dark-mode .uses h2,body.dark-mode .story h2,body.dark-mode .product-copy h3{color:#e8ebdf}
+body.dark-mode .lead,body.dark-mode .manifesto>p:last-child,body.dark-mode .product-copy>p:not(.eyebrow),body.dark-mode .story-copy>p:not(.eyebrow),body.dark-mode .coming>p{color:#b7c0b2}
+body.dark-mode .product-section{background:#1b241d}
+body.dark-mode .product{background:#202a22}
+body.dark-mode .detail,body.dark-mode .price{border-color:#394439}
+body.dark-mode .detail span,body.dark-mode .price span,body.dark-mode .hint{color:#b5bdaf}
+body.dark-mode .price strong{color:#d2bd8a}
+body.dark-mode .features,body.dark-mode .contact{background:#101a13}
+body.dark-mode .story{background:#151b17}
+body.dark-mode .soon-grid article{background:#29352b;color:#e7e8df}
+body.dark-mode .uses-grid div{border-color:#394439}
+body.dark-mode .uses-grid b,body.dark-mode .soon-grid b{color:#e7e8df}
+body.dark-mode footer{background:#0d140f}
+body.dark-mode .underlink{border-color:#9c895d}
+body.dark-mode .header nav{background:#172019}
+body.dark-mode .hamb svg{stroke:currentColor}
+body.dark-mode .hero-bgword{color:rgba(220,230,210,.035)}
+body.dark-mode .feature-grid p,body.dark-mode .feature-intro{color:#b7c2b4}
+body.dark-mode .contact-card{border-color:#536052}
+body.dark-mode .light-button{background:#e7e8df;color:#172119}
+
+
+/* Desktop readability refinement: enlarge supporting text only; preserve display headings. */
+@media (min-width: 761px) {
+  .topline { font-size: 12px; }
+  .logo small, .footer-logo small { font-size: 11px; }
+  .header nav { font-size: 14px; }
+  .nav-cta { font-size: 13px; }
+  .eyebrow { font-size: 12px; }
+  .lead { font-size: 15px; }
+  .button, .underlink { font-size: 13px; }
+  .hero-proof b { font-size: 13px; }
+  .hero-proof small { font-size: 12px; }
+  .hero-foot { font-size: 12px; }
+  .round-seal { font-size: 12px; }
+  .round-seal small { font-size: 11px; }
+  .visual-caption { font-size: 11px; }
+  .manifesto > p:last-child { font-size: 14px; }
+  .en-index, .coming-head span { font-size: 12px; }
+  .image-kicker { font-size: 11px; }
+  .liter small { font-size: 12px; }
+  .detail span, .hint { font-size: 12px; }
+  .price span { font-size: 13px; }
+  .product-copy > p:not(.eyebrow), .feature-intro,
+  .feature-grid article p, .story p, .contact p { font-size: 15px; }
+  .footer, .footer a, .footer p { font-size: 13px; }
+  .utility-btn { font-size: 14px; }
+}
+
+
+/* ZAYTOON warm ivory palette: softer than pure white, with comfortable contrast. */
+:root {
+  color-scheme: light;
+  --zaytoon-warm-bg: #f4efe4;
+  --zaytoon-warm-surface: #f8f4eb;
+  --zaytoon-warm-panel: #eee7d8;
+  --zaytoon-warm-border: #e2d9c8;
+}
+html { background: var(--zaytoon-warm-bg); }
+body { background: var(--zaytoon-warm-bg); }
+.header { background: rgba(248,244,235,.97); border-bottom-color: var(--zaytoon-warm-border); }
+.hero, .coming { background: #eee8da; }
+.manifesto, .story, .uses { background: var(--zaytoon-warm-bg); }
+.product-section { background: #eae3d5; }
+.product { background: var(--zaytoon-warm-surface); }
+.product-image { background: #d7cdbb; }
+.soon-grid article { background: #e9e1d2; }
+.uses-grid div { border-color: var(--zaytoon-warm-border); }
+.detail, .price { border-color: var(--zaytoon-warm-border); }
+.header nav { background: rgba(248,244,235,.98); }
+
+/* Keep the night palette softly warm too, never pure black or stark white. */
+body.dark-mode {
+  background: #191d18;
+  color: #e8e2d5;
+}
+body.dark-mode .header { background: rgba(29,34,27,.97); }
+body.dark-mode .hero, body.dark-mode .coming { background: #252b22; }
+body.dark-mode .manifesto, body.dark-mode .story, body.dark-mode .uses { background: #191d18; }
+body.dark-mode .product-section { background: #20261f; }
+body.dark-mode .product { background: #252b22; }
+body.dark-mode .soon-grid article { background: #30372b; }
+body.dark-mode .uses-grid div,
+body.dark-mode .detail, body.dark-mode .price { border-color: #414638; }
+body.dark-mode .header nav { background: #1d241d; }

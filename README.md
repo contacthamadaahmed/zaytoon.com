@@ -1,4 +1,4 @@
-updated# ZAYTOON — النسخة التصميمية الثانية
+# ZAYTOON — النسخة التصميمية الثانية
 
 موقع تعريفي خفيف باللغة العربية واتجاه RTL، متجاوب مع الهاتف والكمبيوتر، والطلبات عبر واتساب.
 
@@ -32,3 +32,14 @@ updated# ZAYTOON — النسخة التصميمية الثانية
 
 - السعر المعروض حالياً: 250 جنيه (قابل للتعديل من `app.js`).
 - تمت إزالة تنبيه التحليل المعملي من الواجهة بناءً على طلب المالك.
+
+
+## Latest update
+- Added Arabic/English language switching with RTL/LTR layout.
+- Added a persistent low-glare dark mode toggle.
+- WhatsApp order messages switch with the selected language.
+
+
+## ZAYTOON V3.2 — Warm palette
+- Replaced stark near-white surfaces with a soft warm ivory palette.
+- Kept the olive-green brand identity and preserved the night-mode palette with warm dark neutrals.
