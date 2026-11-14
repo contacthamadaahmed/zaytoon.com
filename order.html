@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#203b2c">
 <title>إتمام الطلب | ZAYTOON</title>
-<meta name="description" content="أرسل طلب زيت زيتون ZAYTOON عبر واتساب.">
+<meta name="description" content="اطلب زيت زيتون ZAYTOON أونلاين.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="style.css">
@@ -15,23 +15,23 @@
 <a class="order-back" href="index.html">← الرجوع للرئيسية</a></header>
 <main class="order-wrap">
 <section class="order-card">
-<div class="order-heading"><p class="order-eyebrow">ZAYTOON · ORDER</p><h1>اطلب زيت زيتون ZAYTOON</h1><p>املأ بيانات التوصيل، وهنراجع معاك تفاصيل الطلب على واتساب.</p></div>
+<h1>إتمام الطلب</h1>
 <div class="order-summary">
-<h2>ملخص الطلب</h2><div class="order-product">زيت زيتون ZAYTOON – 1 لتر</div>
+<h2>ملخص الطلب</h2><div class="order-product">زيت زيتون ZAYTOON – 500 مل</div>
 <div class="qty-row"><span>الكمية</span><button type="button" id="minus" aria-label="تقليل الكمية">−</button><output id="qty" aria-live="polite">1</output><button type="button" id="plus" aria-label="زيادة الكمية">+</button></div>
-<div class="order-price">السعر: يُحدد قريباً – هنأكد معاك السعر وتفاصيل الطلب</div>
+<div class="order-price">سعر العبوة: 250 جنيه مصري · الشحن يُحدد بعد معرفة العنوان</div>
 </div>
 <form class="order-form" id="orderForm" novalidate>
 <div class="field"><label for="name">الاسم بالكامل <span aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" required><small class="field-error" id="nameError"></small></div>
-<div class="field"><label for="phone">رقم الموبايل <span aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" inputmode="numeric" dir="ltr" pattern="^01[0125][0-9]{8}$" autocomplete="tel" placeholder="" required><small class="field-error" id="phoneError"></small></div>
+<div class="field"><label for="phone">رقم الموبايل <span aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" inputmode="numeric" dir="ltr" pattern="^01[0125][0-9]{8}$" autocomplete="tel" required><small class="field-hint">مثال: 01012345678</small><small class="field-error" id="phoneError"></small></div>
 <div class="field"><label for="governorate">المحافظة <span aria-hidden="true">*</span></label><select id="governorate" name="governorate" required><option value="">اختر المحافظة</option><option value="القاهرة">القاهرة</option><option value="الجيزة">الجيزة</option><option value="الإسكندرية">الإسكندرية</option><option value="الدقهلية">الدقهلية</option><option value="البحر الأحمر">البحر الأحمر</option><option value="البحيرة">البحيرة</option><option value="الفيوم">الفيوم</option><option value="الغربية">الغربية</option><option value="الإسماعيلية">الإسماعيلية</option><option value="المنوفية">المنوفية</option><option value="المنيا">المنيا</option><option value="القليوبية">القليوبية</option><option value="الوادي الجديد">الوادي الجديد</option><option value="السويس">السويس</option><option value="أسوان">أسوان</option><option value="أسيوط">أسيوط</option><option value="بني سويف">بني سويف</option><option value="بورسعيد">بورسعيد</option><option value="دمياط">دمياط</option><option value="الشرقية">الشرقية</option><option value="جنوب سيناء">جنوب سيناء</option><option value="كفر الشيخ">كفر الشيخ</option><option value="مطروح">مطروح</option><option value="الأقصر">الأقصر</option><option value="قنا">قنا</option><option value="شمال سيناء">شمال سيناء</option><option value="سوهاج">سوهاج</option></select><small class="field-error" id="governorateError"></small></div>
 <div class="field"><label for="city">المدينة / المنطقة <span aria-hidden="true">*</span></label><input id="city" name="city" autocomplete="address-level2" required><small class="field-error" id="cityError"></small></div>
 <div class="field"><label for="address">العنوان بالتفصيل: الشارع، رقم العمارة، الدور، الشقة <span aria-hidden="true">*</span></label><textarea id="address" name="address" autocomplete="street-address" required></textarea><small class="field-error" id="addressError"></small></div>
 <div class="field"><label for="landmark">علامة مميزة قريبة</label><input id="landmark" name="landmark"></div>
 <div class="field"><label for="notes">ملاحظات إضافية</label><textarea id="notes" name="notes"></textarea></div>
-<button class="order-submit" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L4 20l1.1-4a8.2 8.2 0 1 1 15.1-4.3Z"/><path d="M9 8.4c.2-.4.4-.4.7-.4h.5c.2 0 .3.1.4.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.3 0 .6.5.8 1.2 1.4 2 1.8"/></svg>أرسل الطلب عبر واتساب</button>
-<p class="order-note">هيتفتح واتساب برسالة جاهزة بطلبك، وهنأكد معاك السعر والتفاصيل.<br>بياناتك بتتبعت لنا عبر واتساب فقط.</p>
-<a id="fallbackLink" class="order-fallback" href="#" target="_self" hidden>اضغط هنا لفتح واتساب برسالة الطلب</a>
+<button class="order-submit" type="submit">تأكيد وإرسال الطلب</button>
+<p class="order-note">سيتم تسجيل طلبك في نظام ZAYTOON، وسنتواصل معك لتأكيد الطلب وتكلفة الشحن.</p>
+<p class="order-note" id="orderStatus" role="status" aria-live="polite" hidden></p>
 </form>
 </section>
 </main>
