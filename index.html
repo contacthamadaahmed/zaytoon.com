@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#203b2c">
 <title>ZAYTOON | زيت زيتون من سيناء</title>
-<meta name="description" content="ZAYTOON — زيت زيتون من سيناء. اكتشف المنتج واطلب بسهولة من خلال نظام الطلبات الإلكتروني.">
+<meta name="description" content="ZAYTOON — زيت زيتون من سيناء. اكتشف المنتج واطلب بسهولة من متجرنا الإلكتروني.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="topline">من خير أرض سيناء إلى مائدتك <span aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 1v14M1 8h14M3 3l10 10m0-10L3 13"/></svg></span> اطلب بسهولة من موقعنا</div>
+<div class="topline">من خير أرض سيناء إلى مائدتك <span aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 1v14M1 8h14M3 3l10 10m0-10L3 13"/></svg></span> اطلب بسهولة من متجرنا الإلكتروني</div>
 <header class="header">
 <a class="logo" href="#home" aria-label="ZAYTOON">
 <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M21 38C8 31 7 17 9 8c12 3 18 14 12 30Z" fill="#a9b88a"/><path d="M22 38C19 21 29 9 38 6c2 15-4 26-16 32Z" fill="#c5a86c"/><path d="M21 39Q23 20 34 9" stroke="#f4f0e6" stroke-width="1.6" fill="none"/></svg>
@@ -22,7 +22,7 @@
 <div class="header-tools"><button class="utility-btn language-toggle" type="button" aria-label="Switch language" title="English">EN</button><button class="utility-btn theme-toggle" type="button" aria-label="Enable dark mode" title="الوضع الليلي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A8 8 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></svg></button></div>
 <button class="hamb" type="button" aria-label="فتح القائمة" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 <nav><a href="#product">منتجنا</a><a href="#difference">حكايتنا</a><a href="#soon">قريباً</a><a href="#contact">تواصل معنا</a></nav>
-<a class="nav-cta" href="order.html">اطلب الآن <b>↗</b></a>
+<a class="nav-cta" href="order.html">السلة <b id="cartCount">0</b></a>
 </header>
 <main id="home">
 <section class="hero">
@@ -30,12 +30,12 @@
 <div class="hero-copy">
 <div class="eyebrow"><i></i> حكاية زيتون من سيناء</div>
 <h1>من خير أرض سيناء<br><em>إلى مائدتك.</em></h1>
-<p class="lead">طبيعة أصيلة، وبساطة تليق بكل مائدة. اكتشف زيت زيتون ZAYTOON واطلب عبوتك بكل سهولة.</p>
+<p class="lead">طبيعة أصيلة، وبساطة تليق بكل مائدة. اكتشف زيت زيتون ZAYTOON واطلب عبوتك بسهولة من خلال متجرنا الإلكتروني.</p>
 <div class="actions"><a class="button primary" href="#product">اكتشف منتجنا <span>←</span></a><a class="underlink" href="#difference">اعرف حكايتنا <span>↗</span></a></div>
 <div class="hero-proof"><span class="leaf" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8m0-12.8L5.6 18.4"/></svg></span><div><b>من سيناء، بكل فخر</b><small>زيت زيتون للاستخدام الغذائي</small></div></div>
 </div>
 <div class="hero-visual">
-<img src="images/hero.jpg" alt="زيت زيتون يُسكب من زجاجة زجاجية" width="1200" height="800" fetchpriority="high">
+<img src="images/hero.svg" alt="زيت زيتون يُسكب من زجاجة زجاجية" width="1200" height="800" fetchpriority="high">
 <div class="visual-shade"></div><div class="round-seal">زيت زيتون<small>من سيناء</small><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8m0-12.8L5.6 18.4"/></svg></b></div>
 <div class="visual-caption"><span dir="ltr" class="ltr-isolate">01 / ZAYTOON</span><span dir="ltr" class="ltr-isolate">PURE • SIMPLE • NATURAL</span></div>
 </div>
@@ -49,11 +49,11 @@
 <section class="product-section section" id="product">
 <div class="section-head"><div><p class="eyebrow">اختيارنا ليك</p><h2>منتج واحد،<br><em>وحكاية تستاهل.</em></h2></div><span class="en-index">01 — OUR PRODUCT</span></div>
 <div class="product">
-<div class="product-image"><img src="images/product.jpg" alt="زجاجة زيت زيتون على خلفية طبيعية" width="1200" height="800" loading="lazy"><span class="image-kicker" dir="ltr"><bdi>ZAYTOON / 01</bdi></span><span class="liter">1<small>لتر</small></span></div>
-<div class="product-copy"><p class="eyebrow" dir="ltr"><bdi>ZAYTOON OLIVE OIL</bdi></p><h3>زيت زيتون ZAYTOON</h3><span class="product-pill">500 مل</span>
+<div class="product-image"><img src="images/product.svg" alt="زجاجة زيت زيتون على خلفية طبيعية" width="1200" height="800" loading="lazy"><span class="image-kicker" dir="ltr"><bdi>ZAYTOON / 01</bdi></span><span class="liter">0.5<small>لتر</small></span></div>
+<div class="product-copy"><p class="eyebrow" dir="ltr"><bdi>ZAYTOON OLIVE OIL</bdi></p><h3>زيت زيتون ZAYTOON</h3><span class="product-pill">500 مل · 0.5 لتر</span>
 <div class="detail"><span>المنشأ</span><b>سيناء – مصر</b></div>
 <div class="price"><span>السعر</span><strong id="price">250 جنيه</strong></div>
-<a class="button primary wide" href="order.html">اطلب الآن <span>↗</span></a><small class="hint">هنأكد معاك السعر وتفاصيل الطلب مباشرة.</small>
+<button class="button primary wide" id="addToCart" type="button">أضف إلى السلة <span>＋</span></button><small class="hint">عبوة 500 مل بسعر 250 جنيه.</small>
 </div></div>
 </section>
 <section class="features section" id="difference">
@@ -75,13 +75,14 @@
 <div class="soon-grid"><article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8m0-12.8L5.6 18.4"/></svg></i><b>منتجات جديدة</b><small dir="ltr"><bdi>COMING SOON</bdi></small></article><article><i aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/></svg></i><b>اختيارات أكتر</b><small dir="ltr"><bdi>COMING SOON</bdi></small></article><article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 16c4-8 6 8 10 0s6 0 8-5"/></svg></i><b>مفاجآت ZAYTOON</b><small dir="ltr"><bdi>COMING SOON</bdi></small></article></div>
 </section>
 <section class="uses section"><p class="eyebrow center">A LITTLE INSPIRATION</p><h2>لمسة زيت زيتون<br><em>تكمّل أكلتك.</em></h2><div class="inspiration-grid">
-<figure><img src="images/olives-bowl.jpg" alt="زيتون أخضر في وعاء خشبي" width="1200" height="800" loading="lazy"><figcaption><span class="green-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12c1-4 5-6 9-6s8 2 9 6H3Zm2 1 2 7h10l2-7M9 6c0-2 1-3 3-4m2 4c1-2 2-3 4-3"/></svg></span>سلطات</figcaption></figure>
-<figure><img src="images/jar.jpg" alt="زيت زيتون في وعاء زجاجي" width="1200" height="800" loading="lazy"><figcaption><span class="green-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 13c0-5 3-9 8-9s8 4 8 9H4Zm0 0c0 4 3 7 8 7s8-3 8-7M8 8l1 2m6-2-1 2"/></svg></span>الخبز</figcaption></figure>
-<figure><img src="images/branch.jpg" alt="غصن زيتون بأوراق وثمار خضراء" width="1200" height="800" loading="lazy"><figcaption><span class="green-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10h16l-2 10H6L4 10Zm2 0c0-4 3-7 6-7s6 3 6 7M8 4 6 2m10 2 2-2M12 3V1"/></svg></span>وصفات في القدر</figcaption></figure>
+<figure><img src="images/olives-bowl.svg" alt="زيتون أخضر في وعاء خشبي" width="1200" height="800" loading="lazy"><figcaption><span class="green-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12c1-4 5-6 9-6s8 2 9 6H3Zm2 1 2 7h10l2-7M9 6c0-2 1-3 3-4m2 4c1-2 2-3 4-3"/></svg></span>سلطات</figcaption></figure>
+<figure><img src="images/jar.svg" alt="زيت زيتون في وعاء زجاجي" width="1200" height="800" loading="lazy"><figcaption><span class="green-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 13c0-5 3-9 8-9s8 4 8 9H4Zm0 0c0 4 3 7 8 7s8-3 8-7M8 8l1 2m6-2-1 2"/></svg></span>الخبز</figcaption></figure>
+<figure><img src="images/branch.svg" alt="غصن زيتون بأوراق وثمار خضراء" width="1200" height="800" loading="lazy"><figcaption><span class="green-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10h16l-2 10H6L4 10Zm2 0c0-4 3-7 6-7s6 3 6 7M8 4 6 2m10 2 2-2M12 3V1"/></svg></span>وصفات في القدر</figcaption></figure>
 </div></section>
-<section class="order-steps section" aria-label="خطوات الطلب"><div><span>١.</span><b>سجّل طلبك من خلال صفحة الطلب</b></div><i class="green-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></i><div><span>٢.</span><b>هنراجع الطلب ونتواصل معاك للتأكيد</b></div></section>
-<section class="contact section" id="contact"><div><p class="eyebrow">LET'S TALK</p><h2>إحنا على<br><em>بُعد رسالة.</em></h2><p>للطلب أو الاستفسار، سجّل طلبك من خلال صفحة الطلب وهنكون معاك.</p></div><div class="contact-card"><span class="green-icon contact-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM4 7l8 6 8-6"/></svg></span><small><bdi>ONLINE ORDERS</bdi></small><strong>اطلب من موقعنا</strong><a class="button light-button" href="order.html">افتح صفحة الطلب ↗</a><span>أدخل بياناتك وسنراجع طلبك ونتواصل معك لتأكيده</span></div></section>
+<section class="order-steps section" aria-label="خطوات الطلب"><div><span>١.</span><b>أضف المنتج إلى السلة</b></div><i class="green-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></i><div><span>٢.</span><b>أرسل طلبك من صفحة إتمام الطلب</b></div></section>
+<section class="contact section" id="contact"><div><p class="eyebrow">LET'S TALK</p><h2>اطلب بسهولة<br><em>من موقعنا.</em></h2><p>للطلب أو الاستفسار، اطلب من الموقع وسنراجع معك تفاصيل التوصيل.</p></div><div class="contact-card"><span class="green-icon contact-symbol" aria-hidden="true">✓</span><small>ONLINE ORDERS</small><strong>اطلب في خطوات بسيطة</strong><a class="button light-button" href="order.html">اذهب إلى إتمام الطلب ↗</a><span>بيانات الطلب تصلنا مباشرة</span></div></section>
 </main>
 <footer><a class="footer-logo" href="#home">ZAYTOON<small>من خير أرض سيناء إلى مائدتك</small></a><p>الطبيعة في أصلها.</p><div><a href="#product">منتجنا</a><a href="#soon">قريباً</a><a href="#contact">تواصل معنا</a></div><small class="copy">© <span id="year"></span> ZAYTOON. جميع الحقوق محفوظة.</small></footer>
-<script src="app.js"></script>
+
+<script src="app.js"></script><script src="cart.js"></script>
 </body></html>

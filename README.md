@@ -43,3 +43,6 @@
 ## ZAYTOON V3.2 — Warm palette
 - Replaced stark near-white surfaces with a soft warm ivory palette.
 - Kept the olive-green brand identity and preserved the night-mode palette with warm dark neutrals.
+
+
+آخر تحديث: تم استرجاع صور Unsplash المستخدمة في النسخة القديمة، وتحسين صفحة الطلب لتتوافق مع ألوان وهوية ZAYTOON وإزالة رقم الموبايل التجريبي.

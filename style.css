@@ -284,3 +284,14 @@ h1,h2,h3{line-height:1.35;letter-spacing:0}
  .order-price{grid-column:1}
  .order-heading>p:last-child{font-size:12px}
 }
+
+/* ZAYTOON online cart + checkout */
+.order-summary [hidden], .order-status[hidden] { display:none !important; }
+.shipping-note { color:#6d705e; font-size:.9rem; margin:.6rem 0 0; }
+.order-submit:disabled { opacity:.5; cursor:not-allowed; }
+.order-status { padding:14px 16px; margin-top:16px; border-radius:10px; background:#e8f1e7; color:#203b2c; line-height:1.8; }
+.field-error { display:block; color:#a33; min-height:1.2em; }
+input[aria-invalid="true"],select[aria-invalid="true"],textarea[aria-invalid="true"] { border-color:#b34b42 !important; }
+#emptyCart { padding:18px; background:#f0eadb; border-radius:10px; line-height:2; }
+#emptyCart a { color:#203b2c; text-decoration:underline; }
+#cartCount { display:inline-grid; place-items:center; min-width:1.6em; min-height:1.6em; border-radius:50%; background:#c5a86c; color:#203b2c; margin-inline-start:6px; }

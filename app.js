@@ -1,12 +1,12 @@
 // ZAYTOON: bilingual interface + persistent appearance preference.
-const STORE = { whatsapp: "201114386413" };
+
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 $("#year").textContent = new Date().getFullYear();
 
 const translations = {
   en: {
-    ".topline": "From the goodness of Sinai <span>✦</span> Order easily via WhatsApp",
+    ".topline": "From the goodness of Sinai <span>✦</span> Order online",
     ".logo small": "Olive oil from Sinai",
     ".header nav a:nth-child(1)": "Our product",
     ".header nav a:nth-child(2)": "Our story",
@@ -28,18 +28,18 @@ const translations = {
     ".product-section .section-head .eyebrow": "Our selection",
     ".product-section .section-head h2": 'One product,<br><em>a story worth sharing.</em>',
     ".product-copy h3": "ZAYTOON Olive Oil",
-    ".product-pill": "1 Liter",
+    ".product-pill": "500 ml",
     ".product-copy > p:not(.eyebrow)": "Olive oil from Sinai, suitable for food use and adding a special touch to your dishes.",
     ".detail span": "Origin",
     ".detail b": "Sinai – Egypt",
     ".price span": "Price",
-    ".product-copy .wide": 'Order via WhatsApp <span>↗</span>',
+    ".product-copy .wide": 'Add to cart <span>＋</span>',
     ".hint": "We’ll confirm the price and order details with you directly.",
     ".features .section-head h2": 'From the land of Sinai,<br><em>to your home.</em>',
     ".feature-intro": "We believe the right choice starts with clear information and a product with a story you know.",
     ".feature-grid article:nth-child(1) h3": "From Sinai",
     ".feature-grid article:nth-child(1) p": "Olive oil from the land of Egyptian Sinai.",
-    ".feature-grid article:nth-child(2) h3": "1-liter bottle",
+    ".feature-grid article:nth-child(2) h3": "500 ml bottle",
     ".feature-grid article:nth-child(2) p": "A bottle suited to everyday use at home.",
     ".feature-grid article:nth-child(3) h3": "For food use",
     ".feature-grid article:nth-child(3) p": "For salads, dipping, and everyday recipes.",
@@ -56,8 +56,8 @@ const translations = {
     ".uses-grid div:nth-child(2) b": "With bread and dips",
     ".uses-grid div:nth-child(3) b": "In everyday recipes",
     ".contact h2": 'We’re just<br><em>a message away.</em>',
-    ".contact > div:first-child > p:last-child": "For orders or questions, message us on WhatsApp. We’ll be happy to help.",
-    ".contact-card .light-button": "Start a WhatsApp chat ↗",
+    ".contact > div:first-child > p:last-child": "Place your order online and we will confirm delivery details.",
+    ".contact-card .light-button": "Go to checkout ↗",
     ".contact-card > span": "Tap to contact us directly",
     "footer .footer-logo small": "From Sinai’s goodness to your table",
     "footer > p": "Nature in its essence.",
@@ -67,7 +67,7 @@ const translations = {
     "footer .copy": "© <span id=\"year\"></span> ZAYTOON. All rights reserved."
   },
   ar: {
-    ".topline": "من خير أرض سيناء <span>✦</span> اطلب بسهولة عبر واتساب",
+    ".topline": "من خير أرض سيناء <span>✦</span> اطلب بسهولة عبر المتجر الإلكتروني",
     ".logo small": "زيت زيتون من سيناء",
     ".header nav a:nth-child(1)": "منتجنا",
     ".header nav a:nth-child(2)": "حكايتنا",
@@ -89,20 +89,20 @@ const translations = {
     ".product-section .section-head .eyebrow": "اختيارنا ليك",
     ".product-section .section-head h2": 'منتج واحد،<br><em>وحكاية تستاهل.</em>',
     ".product-copy h3": "زيت زيتون ZAYTOON",
-    ".product-pill": "1 لتر",
+    ".product-pill": "500 مل",
     ".product-copy > p:not(.eyebrow)": "زيت زيتون من سيناء، مناسب للاستخدام الغذائي وإضافة لمسة مميزة لأطباقك.",
     ".detail:nth-of-type(1) span": "الحجم",
-    ".detail:nth-of-type(1) b": "1 لتر",
+    ".detail:nth-of-type(1) b": "500 مل",
     ".detail:nth-of-type(2) span": "المنشأ",
     ".detail:nth-of-type(2) b": "سيناء – مصر",
     ".price span": "السعر",
-    ".product-copy .wide": 'اطلب عبر واتساب <span>↗</span>',
+    ".product-copy .wide": 'اطلب عبر المتجر الإلكتروني <span>↗</span>',
     ".hint": "هنأكد معاك السعر وتفاصيل الطلب مباشرة.",
     ".features .section-head h2": 'من أرض سيناء،<br><em>لبيتك.</em>',
     ".feature-intro": "بنؤمن إن الاختيار الصح يبدأ بمعلومة واضحة ومنتج تعرف حكايته.",
     ".feature-grid article:nth-child(1) h3": "من سيناء",
     ".feature-grid article:nth-child(1) p": "زيت زيتون من أرض سيناء المصرية.",
-    ".feature-grid article:nth-child(2) h3": "عبوة 1 لتر",
+    ".feature-grid article:nth-child(2) h3": "عبوة 500 مل",
     ".feature-grid article:nth-child(2) p": "عبوة مناسبة للاستخدام اليومي في بيتك.",
     ".feature-grid article:nth-child(3) h3": "للاستخدام الغذائي",
     ".feature-grid article:nth-child(3) p": "للسلطات والتغميس ووصفاتك اليومية.",
@@ -119,8 +119,8 @@ const translations = {
     ".uses-grid div:nth-child(2) b": "مع الخبز والتغميس",
     ".uses-grid div:nth-child(3) b": "في وصفاتك اليومية",
     ".contact h2": 'إحنا على<br><em>بُعد رسالة.</em>',
-    ".contact > div:first-child > p:last-child": "للطلب أو الاستفسار، ابعتلنا على واتساب وهنكون معاك.",
-    ".contact-card .light-button": "ابدأ محادثة واتساب ↗",
+    ".contact > div:first-child > p:last-child": "للطلب أو الاستفسار، ابعتلنا على المتجر الإلكتروني وهنكون معاك.",
+    ".contact-card .light-button": "ابدأ محادثة المتجر الإلكتروني ↗",
     ".contact-card > span": "اضغط للتواصل المباشر",
     "footer .footer-logo small": "من خير أرض سيناء إلى مائدتك",
     "footer > p": "الطبيعة في أصلها.",
@@ -140,20 +140,18 @@ function setLanguage(lang) {
     if (el) el.innerHTML = value;
   });
   $("#year").textContent = new Date().getFullYear();
-  $("#price").textContent = lang === "ar" ? "يُحدد قريباً" : "To be confirmed";
+  $("#price").textContent = lang === "ar" ? "250 جنيه" : "EGP 250";
   $(".language-toggle").textContent = lang === "ar" ? "EN" : "ع";
   $(".language-toggle").title = lang === "ar" ? "Switch to English" : "التبديل إلى العربية";
   $(".hamb").setAttribute("aria-label", lang === "ar" ? "فتح القائمة" : "Open menu");
   $(".theme-toggle").setAttribute("aria-label", document.body.classList.contains("dark-mode") ? (lang === "ar" ? "إيقاف الوضع الليلي" : "Turn off dark mode") : (lang === "ar" ? "تفعيل الوضع الليلي" : "Enable dark mode"));
   document.title = lang === "ar" ? "ZAYTOON — من خير أرض سيناء إلى مائدتك" : "ZAYTOON — From Sinai to Your Table";
-  $('meta[name="description"]').content = lang === "ar" ? "ZAYTOON زيت زيتون من سيناء. اكتشف عبوة اللتر واطلب مباشرة عبر واتساب." : "ZAYTOON olive oil from Sinai, Egypt. Discover our 1-liter bottle and order directly on WhatsApp.";
+  $('meta[name="description"]').content = lang === "ar" ? "ZAYTOON زيت زيتون من سيناء. عبوة 500 مل بسعر 250 جنيه واطلب أونلاين." : "ZAYTOON olive oil from Sinai, Egypt. 500 ml bottle for EGP 250. Order online.";
   const orderText = lang === "ar"
-    ? "مرحباً ZAYTOON، حابب أطلب زيت زيتون 1 لتر. الاسم: ... الكمية: ... المنطقة: ..."
-    : "Hello ZAYTOON, I would like to order 1 liter of olive oil. Name: ... Quantity: ... Area: ...";
-  $(".product-copy .wide").href = `https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent(orderText)}`;
-  $(".nav-cta").href = `https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent(lang === "ar" ? "مرحباً ZAYTOON، حابب أطلب زيت زيتون 1 لتر" : "Hello ZAYTOON, I would like to order 1 liter of olive oil.")}`;
-  $(".contact-card .light-button").href = `https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent(lang === "ar" ? "مرحباً ZAYTOON، حابب أستفسر عن المنتج" : "Hello ZAYTOON, I have a question about your product.")}`;
-  $(".whatsapp-float").setAttribute("aria-label", lang === "ar" ? "اطلب عبر واتساب" : "Order via WhatsApp");
+    ? "مرحباً ZAYTOON، حابب أطلب زيت زيتون 500 مل. الاسم: ... الكمية: ... المنطقة: ..."
+    : "Hello ZAYTOON, I would like to order 500 ml of olive oil. Name: ... Quantity: ... Area: ...";
+
+  $(".nav-cta").href = "order.html";
   localStorage.setItem("zaytoon-language", lang);
 }
 const savedLanguage = localStorage.getItem("zaytoon-language") || "ar";
