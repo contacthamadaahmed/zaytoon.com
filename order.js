@@ -1,6 +1,7 @@
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxCg_gyOHAfdu74d7LwFrOS6VjqAtfAg0Coc1NF_JhB3QWnmhtpUDIu5nJ5ElUaqmaG/exec";
+
 const form = document.querySelector("#orderForm");
 const qtyOut = document.querySelector("#qty");
-const fallback = document.querySelector("#fallbackLink");
 const submitButton = form.querySelector('button[type="submit"]');
 
 let qty = 1;
@@ -29,9 +30,8 @@ const errorMessages = {
   address: "من فضلك اكتب العنوان بالتفصيل."
 };
 
-form.addEventListener("submit", e => {
+form.addEventListener("submit", async e => {
   e.preventDefault();
-
   if (form.dataset.sending === "1") return;
 
   const values = {};
@@ -50,8 +50,8 @@ form.addEventListener("submit", e => {
     const invalid = !value || (id === "phone" && !/^01[0125]\d{8}$/.test(value));
 
     field.setAttribute("aria-invalid", invalid ? "true" : "false");
-    document.getElementById(id + "Error").textContent =
-      invalid ? errorMessages[id] : "";
+    const error = document.getElementById(id + "Error");
+    if (error) error.textContent = invalid ? errorMessages[id] : "";
 
     if (invalid && !firstInvalid) firstInvalid = field;
   });
@@ -62,29 +62,52 @@ form.addEventListener("submit", e => {
   }
 
   const optionalValue = id =>
-    document.getElementById(id).value.trim() || "—";
+    document.getElementById(id)?.value.trim() || "—";
 
-  const message = [
-    "مرحباً ZAYTOON، حابب أطلب:",
-    "المنتج: زيت زيتون 1 لتر",
-    "الكمية: " + qty,
-    "الاسم: " + values.name,
-    "الموبايل: " + values.phone,
-    "المحافظة: " + values.governorate,
-    "المدينة/المنطقة: " + values.city,
-    "العنوان: " + values.address,
-    "علامة مميزة: " + optionalValue("landmark"),
-    "ملاحظات: " + optionalValue("notes")
-  ].join("\n");
-
-  const url =
-    "https://wa.me/201114386413?text=" + encodeURIComponent(message);
+  const payload = {
+    name: values.name,
+    phone: values.phone,
+    governorate: values.governorate,
+    city: values.city,
+    address: values.address,
+    quantity: String(qty),
+    notes: optionalValue("notes"),
+    landmark: optionalValue("landmark"),
+    product: "زيت زيتون 500 مل",
+    unitPrice: "250"
+  };
 
   form.dataset.sending = "1";
   submitButton.disabled = true;
-  submitButton.textContent = "جاري فتح واتساب…";
+  submitButton.textContent = "جارٍ إرسال الطلب…";
 
-  fallback.href = url;
-  fallback.hidden = false;
-  window.location.href = url;
+  try {
+    const body = new URLSearchParams({ payload: JSON.stringify(payload) });
+
+    // Apps Script accepts a form-encoded POST. no-cors prevents the browser
+    // from reading Google's cross-origin response; it does not verify storage.
+    await fetch(WEB_APP_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+      body
+    });
+
+    const status = document.getElementById("orderStatus");
+    if (status) {
+      status.textContent = "تم إرسال طلبك. سنتواصل معك لتأكيد التفاصيل وتكلفة الشحن.";
+      status.hidden = false;
+    } else {
+      alert("تم إرسال طلبك. سنتواصل معك لتأكيد التفاصيل وتكلفة الشحن.");
+    }
+
+    form.reset();
+    qty = 1;
+    qtyOut.textContent = qty;
+  } catch (error) {
+    form.dataset.sending = "0";
+    submitButton.disabled = false;
+    submitButton.textContent = "إرسال الطلب";
+    alert("تعذر إرسال الطلب. تحقق من اتصال الإنترنت وحاول مرة أخرى.");
+  }
 });
