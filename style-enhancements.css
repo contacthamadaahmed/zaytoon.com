@@ -1,0 +1,85 @@
+/* ZAYTOON enhancements: bigger readable text, livelier UI. Loaded after style.css. */
+
+/* ---------- 1) Readable text sizes ---------- */
+html { font-size: 17px; }
+body { font-size: 1.05rem; line-height: 1.8; }
+p, li, label { font-size: 1.05rem; }
+small, .hint, .copy, .footer-logo small, .soon-grid small, .order-steps span { font-size: 0.98rem !important; }
+.topline { font-size: 0.98rem; }
+.header nav a, .nav-cta { font-size: 1.02rem; }
+.eyebrow, .en-index, .coming-head span, .feature-intro { font-size: 0.98rem; letter-spacing: 0.04em; }
+.product-pill, .detail span, .detail b { font-size: 1.02rem; }
+.price span { font-size: 1.1rem; }
+.visual-caption span, .hero-foot span, .scroll { font-size: 0.98rem; }
+.feature-grid p, .story-copy p, .contact-card span, .contact-section p { font-size: 1.08rem; }
+footer p, footer div a { font-size: 1.02rem; }
+.button, .underlink { font-size: 1.08rem; }
+
+/* ---------- 2) Livelier feel ---------- */
+@keyframes zt-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes zt-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes zt-shine { 0% { transform: translateX(-120%); } 100% { transform: translateX(220%); } }
+
+.hero-copy > *, .hero-visual { animation: zt-rise .8s ease both; }
+.hero-copy > *:nth-child(2) { animation-delay: .08s; }
+.hero-copy > *:nth-child(3) { animation-delay: .16s; }
+.hero-copy > *:nth-child(4) { animation-delay: .24s; }
+.hero-visual { animation-delay: .15s; }
+
+.button { position: relative; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease; }
+.button:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(32, 59, 44, .22); }
+.button:active { transform: translateY(0) scale(.98); }
+.button.primary::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 40%; left: 0;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: translateX(-120%); pointer-events: none;
+}
+.button.primary:hover::after { animation: zt-shine .9s ease; }
+
+.ghost {
+  background: transparent; color: #203b2c; border: 2px solid #203b2c;
+}
+.ghost:hover { background: #203b2c; color: #f4f0e6; }
+.checkout-btn { margin-top: 12px; }
+
+.product-image img, .bottle-shot img, .plate-shot img, .inspiration-grid img {
+  transition: transform .6s ease;
+}
+.product-image:hover img, .inspiration-grid figure:hover img { transform: scale(1.04); }
+
+.feature-grid article, .soon-grid article {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.feature-grid article:hover, .soon-grid article:hover {
+  transform: translateY(-6px); box-shadow: 0 16px 30px rgba(32, 59, 44, .14);
+}
+.feature-icon, .green-icon { transition: transform .4s ease; }
+.feature-grid article:hover .feature-icon { transform: rotate(-10deg) scale(1.1); }
+
+.hero-visual img, .round-seal { animation: zt-float 6s ease-in-out infinite; }
+.round-seal { animation-duration: 7s; }
+
+/* ---------- 3) Showcase section (bottle + olive plate) ---------- */
+.showcase {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center;
+  padding: 56px 6vw; max-width: 1200px; margin: 0 auto;
+}
+.bottle-shot, .plate-shot { margin: 0; }
+.bottle-shot img, .plate-shot img {
+  width: 100%; height: auto; border-radius: 22px; display: block;
+  box-shadow: 0 18px 40px rgba(32, 59, 44, .18);
+}
+.plate-shot { text-align: center; }
+.plate-shot img { border-radius: 22px; max-width: 420px; margin: 0 auto 18px; background: #fff; }
+.plate-shot p { font-size: 1.1rem; color: #203b2c; font-weight: 600; }
+.bottle-shot img { animation: zt-float 7s ease-in-out infinite; }
+
+@media (max-width: 760px) {
+  .showcase { grid-template-columns: 1fr; padding: 40px 5vw; }
+  .bottle-shot img { max-width: 320px; margin: 0 auto; }
+}
+
+/* ---------- 4) Accessibility: respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
